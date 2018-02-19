@@ -1,0 +1,58 @@
+{
+  "name": "PWA_fredosar.org",
+  "version": "1.0.0",
+  "description": "PWA for fredosar.org Project",
+  "author": "Refik Kerimi <rkerimi.itsb-b2014@fh-salzburg.ac.at>",
+  "private": true,
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-2"
+    ]
+  },
+  "scripts": {
+    "start": "yarn run development",
+    "development": "webpack-dev-server --config config/webpack.js --env.development --env.api=development",
+    "production": "webpack -p --config config/webpack.production.js --env.production",
+    "webpack-defaults": "webpack-defaults"
+  },
+  "engines": {
+    "node": ">= 7.x",
+    "yarn": ">= 0.x"
+  },
+  "dependencies": {
+    "babel-plugin-react-transform": "^3.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "imports-loader": "^0.7.0",
+    "react": "^15.x",
+    "react-dom": "^15.x",
+    "react-router-dom": "latest",
+    "react-tap-event-plugin": "^2.0.1",
+    "script-loader": "^0.7.0",
+    "semantic-ui-react": "^0.74.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.x",
+    "babel-loader": "^6.x",
+    "babel-plugin-transform-class-properties": "^6.x",
+    "babel-plugin-transform-object-assign": "^6.x",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.x",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "latest",
+    "html-loader": "latest",
+    "html-webpack-plugin": "latest",
+    "react-hot-loader": "^1.3.0",
+    "style-loader": "^0.13.1",
+    "tape": "^4.x",
+    "transfer-webpack-plugin": "latest",
+    "uglify-js": "git://github.com/mishoo/UglifyJS2#harmony-v2.8.22",
+    "webpack": "latest",
+    "webpack-dev-server": "^2.x"
+  },
+  "pre-push": []
+}
