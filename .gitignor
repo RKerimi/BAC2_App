@@ -1,7 +1,0 @@
-node_modules
-*.log
-dist/index.html
-dist/assets/js
-.DS_Store
-.idea/
-.idea/workspace.xml
