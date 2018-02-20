@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1744be88-90a7-4065-8a40-eccd310c834e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/manifest.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/img/icons8-add-new-48.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/img/icons8-plus-150.png" />
-      <change beforePath="$PROJECT_DIR$/.gitignor" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
@@ -44,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -97,6 +92,7 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/app/manifest.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -229,12 +225,12 @@
       <updated>1518687554965</updated>
       <workItem from="1518687556223" duration="7801000" />
       <workItem from="1519027044203" duration="1108000" />
-      <workItem from="1519112228453" duration="1462000" />
+      <workItem from="1519112228453" duration="1670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16040000" />
+    <option name="totallyTimeSpent" value="16248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3083" y="163" width="3094" height="1690" extended-state="6" />
@@ -631,18 +627,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
