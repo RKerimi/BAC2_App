@@ -1,32 +1,50 @@
 {
-  "name":"PWA Smart Home",
-  "short_name":"Sweaty",
-  "start_url":"/index.html",
+  "name":"PWA Smart Home Light",
+  "short_name":"PWA_SHL",
+  "start_url":"/home",
   "scope":".",
   "display":"standalone",
   "background_color":"#fff",
   "theme-color":"#3F51B5",
-  "description":"Keep running",
+  "description":"Keep running with PWA",
   "dir":"ltr",
-  "lang":"de",
+  "lang":"de-de",
   "orientation":"portrait-primary",
   "icons":[
     {
-      "src":"/static/img/AX48.png",
+      "src":"./static/img/AX48.png",
       "type":"image/png",
       "sizes":"48x48"
     },
     {
-      "src":"/static/img/AX64.png",
+      "src":"./static/img/AX96.png",
       "type":"image/png",
-      "sizes":"64x64"
+      "sizes":"96x96"
     },
     {
-      "src":"/static/img/AX144.png",
+      "src":"./static/img/AX144.png",
       "type":"image/png",
       "sizes":"144x144"
+    },
+    {
+      "src":"./static/img/AX192.png",
+      "type":"image/png",
+      "sizes":"192x192"
+    },
+    {
+      "src":"./static/img/AX256.png",
+      "type":"image/png",
+      "sizes":"256x256"
+    },
+    {
+      "src":"./static/img/AX384.png",
+      "type":"image/png",
+      "sizes":"384x384"
+    },
+    {
+      "src":"./static/img/AX512.png",
+      "type":"image/png",
+      "sizes":"512x512"
     }
-
-
   ]
 }
