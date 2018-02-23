@@ -11,8 +11,7 @@ const Home = () => (
             inverted
             textAlign='center'
             style={{minHeight: 700, padding: '1em 0em', backgroundColor: '#2B4798'}}
-            vertical
-        >
+            vertical>
             <Navigation />
             <Masthead/>
         </Segment>

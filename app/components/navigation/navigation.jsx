@@ -17,7 +17,7 @@ class Navigation extends Component {
                 <Segment>
                 <Menu stackable pointing secondary size='large' style={{border: 'none'}}>
                     <Menu.Item as={Link} to="/" active={activeItem === '/'} onClick={this.handleItemClick}>Home</Menu.Item>
-                    <Menu.Item as={Link} to="/team" active={activeItem === '/team'} onClick={this.handleItemClick}>Team</Menu.Item>
+
                     <Menu.Item position='right'><GitlabButtonFramework/> &nbsp; <GitlabButtonFRAPPS/></Menu.Item>
                 </Menu>
                 </Segment>

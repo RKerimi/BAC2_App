@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "./components/home/home";
-import Team from "./components/team/team"
 import {Switch, Route} from 'react-router-dom'
 
 const NotFound = () => (
@@ -12,7 +11,6 @@ export default class Routes extends React.Component {
         return (
             <Switch>
                 <Route exact path='/' component={Home}/>
-                <Route exact path='/team' component={Team}/>
                 <Route path='*' component={NotFound}/>
             </Switch>
         )
