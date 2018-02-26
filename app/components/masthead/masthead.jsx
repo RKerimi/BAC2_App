@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom"
 import {Container, Button, Icon, Header} from "semantic-ui-react";
+import LightButton from '../helpers/lightButton'
 
 const Masthead = () => (
         <Container text>
@@ -16,10 +17,7 @@ const Masthead = () => (
                 inverted
                 style={{fontSize: '1.7em', fontWeight: 'normal'}}
             />
-            <Button as={Link} to="/get-started" primary size='huge'>
-                Sample Button
-                <Icon name='right arrow'/>
-            </Button>
+            <LightButton/>
             <br/>
 
         </Container>

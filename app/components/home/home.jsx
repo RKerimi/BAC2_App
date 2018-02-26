@@ -15,7 +15,6 @@ const Home = () => (
             <Navigation />
             <Masthead/>
         </Segment>
-        <Intro/>
         <Footer/>
     </div>
 
