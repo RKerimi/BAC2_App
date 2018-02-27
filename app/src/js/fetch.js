@@ -4,7 +4,7 @@
  * Released under the MIT license
  * github.com/Octane/setImmediate
  */
-window.setImmediate || function () {'use strict';
+/*window.setImmediate || function () {'use strict';
 
     var uid = 0;
     var storage = {};
@@ -68,6 +68,8 @@ window.setImmediate || function () {'use strict';
  * Released under the MIT license
  * github.com/Octane/Promise
  */
+
+/*
 (function (global) {'use strict';
 
     var STATUS = '[[PromiseStatus]]';
@@ -369,4 +371,4 @@ window.setImmediate || function () {'use strict';
         global.Promise = Promise;
     }
 
-}(this));
+}(this));*/

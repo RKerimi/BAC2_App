@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "start": "yarn run development http-server -c-1",
+    "start": "yarn run development",
     "development": "webpack-dev-server --config config/webpack.js --env.development --env.api=development",
     "production": "webpack -p --config config/webpack.production.js --env.production",
     "webpack-defaults": "webpack-defaults"

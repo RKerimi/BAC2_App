@@ -29,8 +29,8 @@ class LightButton extends Component {
         const { active, count } = this.state
         return (
             <div>
-            <Button toggle active={active} onClick={this.handleClick}>
-                {this.state.active ? 'Light ON' : 'Light OFF'}
+            <Button id="lightButton" toggle active={active} onClick={this.handleClick}>
+                {this.state.active ? 'Licht AN' : 'Licht AUS'}
                 {console.dir(active)}
                 {console.log(count)}
             </Button><br/>

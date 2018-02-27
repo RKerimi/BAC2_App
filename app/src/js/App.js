@@ -6,11 +6,12 @@ if (!window.Promise) {
 
 //Registrierung vom Service Worker
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-        .register('/sw.js')  		//Pfadname aus dem Projekt; kann auch anders
+    navigator.serviceWorker.register('/sw.js')
         .then(reg => console.log('Service worker registered!', reg))
         .catch(err => console.log(err));
 }
+
+//Callback falls der Add to Homescreen banner sich erst nach einem Event zeigen darf
 
 /*window.addEventListener('beforeinstallprompt', event => {
     console.log('beforeinstallprompt fired');

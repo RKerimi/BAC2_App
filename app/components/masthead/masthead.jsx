@@ -7,13 +7,13 @@ const Masthead = () => (
         <Container text>
             <Header
                 as='h1'
-                content='Smart Home Light Button'
+                content='Smart Home'
                 inverted
                 style={{fontSize: '4em', fontWeight: 'normal', marginBottom: 0}}
             />
             <Header
                 as='h2'
-                content='Here is another text'
+                content='Lichttaster'
                 inverted
                 style={{fontSize: '1.7em', fontWeight: 'normal'}}
             />
