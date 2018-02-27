@@ -1,7 +1,7 @@
 {
   "name":"PWA Smart Home Light",
   "short_name":"PWA_SHL",
-  "start_url":"/home",
+  "start_url":"/",
   "scope":".",
   "display":"standalone",
   "background_color":"#fff",
@@ -12,37 +12,37 @@
   "orientation":"portrait-primary",
   "icons":[
     {
-      "src":"./static/img/AX48.png",
+      "src":"./static/img/light48.png",
       "type":"image/png",
       "sizes":"48x48"
     },
     {
-      "src":"./static/img/AX96.png",
+      "src":"./static/img/light96.png",
       "type":"image/png",
       "sizes":"96x96"
     },
     {
-      "src":"./static/img/AX144.png",
+      "src":"./static/img/light144.png",
       "type":"image/png",
       "sizes":"144x144"
     },
     {
-      "src":"./static/img/AX192.png",
+      "src":"./static/img/light192.png",
       "type":"image/png",
       "sizes":"192x192"
     },
     {
-      "src":"./static/img/AX256.png",
+      "src":"./static/img/light256.png",
       "type":"image/png",
       "sizes":"256x256"
     },
     {
-      "src":"./static/img/AX384.png",
+      "src":"./static/img/light384.png",
       "type":"image/png",
       "sizes":"384x384"
     },
     {
-      "src":"./static/img/AX512.png",
+      "src":"./static/img/light512.png",
       "type":"image/png",
       "sizes":"512x512"
     }
