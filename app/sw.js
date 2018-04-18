@@ -7,7 +7,7 @@
 // install und  activate wird vom Browser getriggert
 
 self.addEventListener('install', event => {
-    console.log('[Service Worker] Installing Service Worker ...', event);
+    console.log('[Service Worker] Installing Service Worker ....', event);
     event.waitUntil(
         caches.open('static')       //parameter = Cachename --> kann benannt werden wie man will
             .then(cache => {
