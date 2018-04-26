@@ -13,9 +13,9 @@ if ('serviceWorker' in navigator) {
 
 //Callback falls der Add to Homescreen banner sich erst nach einem Event zeigen darf
 
-/*window.addEventListener('beforeinstallprompt', event => {
+window.addEventListener('beforeinstallprompt', event => {
     console.log('beforeinstallprompt fired');
     event.preventDefault();
     deferredPrompt = event;
     return false;
-});*/
+});

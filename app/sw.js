@@ -18,7 +18,7 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
     console.log('[Service Worker] Activating Service Worker ....', event);
     return self.clients.claim();
-});
+})
 
 //fetch Event wird von der aktuellen Seite getriggert
 self.addEventListener('fetch', function(event) {
