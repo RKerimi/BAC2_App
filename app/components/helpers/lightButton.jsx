@@ -5,7 +5,7 @@ class LightButton extends Component {
     constructor(props) {
         super(props);
         this.state = {  active: false,
-                        count:0,
+                        count: 0,
                         date: new Date()
                     };
 
@@ -24,8 +24,6 @@ class LightButton extends Component {
         if(this.state.active==false){
         this.count(e);
         }
-
-
 
 
     }

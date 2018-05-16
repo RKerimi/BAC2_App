@@ -1,3 +1,23 @@
-{
-  "name":"John"
-}
+[
+
+  {
+    "name":"JohnGirl",
+    "email":"JohnGirl@gmail.com"
+  },
+
+  {
+    "name":"JohnBoy",
+    "email":"JohnBoy@gmail.com"
+  },
+
+  {
+    "name":"JohnEverything",
+    "email":"JohnEverything@gmail.com"
+  },
+
+  {
+    "name":"JohnSomething",
+    "email":"JohnSomething@gmail.com"
+  }
+
+]
