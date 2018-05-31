@@ -30,6 +30,7 @@
     "react-dom": "^15.x",
     "react-router-dom": "latest",
     "react-tap-event-plugin": "^2.0.1",
+    "reqwest": "^2.0.5",
     "script-loader": "^0.7.0",
     "semantic-ui-react": "^0.74.2"
   },

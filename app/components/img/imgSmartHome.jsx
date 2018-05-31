@@ -1,8 +1,7 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
 
-const ImageExampleImage = () => (
-    <Image centered src='../static/img/light144.png' size='tiny' />
+const ImgSmartHome = () => (
+    <Image floated='right' src='../static/img/light48.png'/>
 )
-
-export default ImageExampleImage
+export default ImgSmartHome

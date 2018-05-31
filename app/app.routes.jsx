@@ -14,7 +14,7 @@ export default class Routes extends React.Component {
         return (
             <div>
         <Navigation/>
-            <Switch >
+            <Switch style={{backgroundColor: '#E6E6FA'}}>
                 <Route exact path='/' component={Home}/>
                 <Route exact path='/licht' component={Light}/>
                 <Route exact path='/heizung' component={Radiator}/>

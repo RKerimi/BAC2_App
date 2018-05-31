@@ -24,8 +24,8 @@
 .
 ├── /app                      # App directory
 |   ├── /components           # App components
-|   |   ├── /home             # App core component folder
-|   |       ├── /home.jsx     # App core component file
+|   |   ├── /main             # App core component folder
+|   |       ├── /header.jsx     # App core component file
 |   ├── app.container.jsx     # App container
 |   ├── app.module.jsx        # App module
 |   └── app.routes.jsx        # App routes
