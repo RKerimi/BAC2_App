@@ -1,55 +1,37 @@
-import React from 'react'
-import {Link, browserHistory, IndexLink} from 'react-router'
+import React, {Component} from "react";
+import {Link} from 'react-router-dom'
+import {Segment, Menu, Container} from 'semantic-ui-react'
 
-import './style.css'
 
 
-const Navigation = () => (
-    <nav>
-        {(sessionStorage.auth && sessionStorage.auth.length > 0)
-            ? <div className="nav-wrapper navStyle">
-                <IndexLink to="/" className="brand-logo">
-                    <img src="../../static/img/Logo_FCBus.png" height="40em"/> First Class Bus</IndexLink>
-                <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons white-text text-darken-4">menu</i></a>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><IndexLink to="/">Home</IndexLink></li>
-                    <li><Link to="/fahrplan">Fahrplan</Link></li>
-                    <li><Link to="/quotes">Angebote</Link></li>
-                    <li><Link to="/orders">Auftrag</Link></li>
-                    <li><Link to="/kunde/aktiv">Kunden</Link></li>
-                    <li><Link to="/artikel">Artikel</Link></li>
-                    <Logout />
-                </ul>
-                <ul className="side-nav" id="mobile-demo">
-                    <li><IndexLink to="/">Home</IndexLink></li>
-                    <li><Link to="/quotes">Angebote</Link></li>
-                    <li><Link to="/orders">Auftrag</Link></li>
-                    <li><Link to="/kunde/aktiv">Kunden</Link></li>
-                    <li><Link to="/artikel">Artikel</Link></li>
-                    <Logout />
-                </ul>
-            </div>
-            : <Login />
-        }
-    </nav>
-)
 
-const Login = () => (
-    <Link to='/login' activeClassName='right hide-on-med-and-down'>
-    <span className="navLogin">
-      Login
-    </span>
-    </Link>
-)
+const navColor = {backgroundColor: 'green',
+                    padding:'0.2em'};
 
-const Logout = () => (
-    <a onClick={() => sessionStorage.removeItem('auth') & browserHistory.push('/login')}
-       className='right hide-on-med-and-down'>
-    <span>
-      Logout
-    </span>
-    </a>
-)
+const navColorBackground = {backgroundColor: '#FFF'};
+
+class Navigation extends Component {
+    state = {}
+
+    handleItemClick = (e, {to}) => this.setState({activeItem: to})
+
+
+
+    render() {
+        const { activeItem } = this.state
+
+        return (
+            <Container>
+                <Segment style={navColorBackground}>
+                    <Menu size='large' style={navColor}>
+                        <Menu.Item as={Link} to="/" active={activeItem === '/'} onClick={this.handleItemClick}>Home</Menu.Item>
+                        <Menu.Item as={Link} to="licht" active={activeItem === '/licht'} onClick={this.handleItemClick}>Licht</Menu.Item>
+                        <Menu.Item as={Link} to="heizung" active={activeItem === '/heizung'} onClick={this.handleItemClick}>Heizung</Menu.Item>
+                    </Menu>
+                </Segment>
+            </Container>
+        )
+    }
+}
 
 export default Navigation
-

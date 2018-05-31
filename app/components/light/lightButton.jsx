@@ -6,7 +6,7 @@ class LightButton extends Component {
         super(props);
         this.state = {  active: false,
                         count: 0,
-                        date: new Date()
+                        time: new Date()
                     };
 
         this.handleClick = this.handleClick.bind(this);
@@ -28,25 +28,25 @@ class LightButton extends Component {
 
     }
     updateTimes(){
-        var date = new Date();
-        this.setState({date: date})
+        var time = new Date();
+
+        this.setState({time: time})
     }
 
 
     render() {
-        const { active, count , date} = this.state;
+        const { active, count , time} = this.state;
 
         return (
             <div>
             <Button id="lightButton" toggle active={active}  onClick={this.handleClick}  >
                 {this.state.active ? 'Licht AN' : 'Licht AUS'}
-
                 {console.dir(active)}
                 {console.log(count)}
-                {console.log(date)}
+                {console.log(time)}
             </Button><br/>
                 {count}<br/>
-                {date.toLocaleString()}
+                {time.toLocaleString()}
             </div>
                                 )
     }

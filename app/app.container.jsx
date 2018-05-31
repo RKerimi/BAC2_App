@@ -1,13 +1,12 @@
 import React from "react";
-import EventEmitter from "./helpers/event_emitter";
 import "./app.style.css";
 
 const app = {}
 app.container = props => <App {...props} />
 const App = ({children}) =>
-            <app>
-                {children}
-            </app>
+    <app >
+        {children}
+    </app>
 
 export default class AppContainer extends React.Component {
     eventEmitter = new EventEmitter()
