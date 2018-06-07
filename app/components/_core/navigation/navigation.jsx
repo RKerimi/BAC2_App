@@ -29,7 +29,7 @@ class Navigation extends Component {
                             <Grid.Column>
 
                                 <Menu size='large' style={navColor}>
-                                    <Menu.Item as={Link} to="/" active={activeItem === '/'} onClick={this.handleItemClick}>Home</Menu.Item>
+                                    <Menu.Item as={Link} to="/home" active={activeItem === '/'} onClick={this.handleItemClick}>Home</Menu.Item>
                                     <Menu.Item as={Link} to="licht" active={activeItem === '/licht'} onClick={this.handleItemClick}>Licht</Menu.Item>
                                     <Menu.Item as={Link} to="heizung" active={activeItem === '/heizung'} onClick={this.handleItemClick}>Heizung</Menu.Item>
                                     <Menu.Item as={Link} to="garage" active={activeItem === '/garage'} onClick={this.handleItemClick}>Garage</Menu.Item>

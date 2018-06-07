@@ -20,7 +20,7 @@ const config = function (env) {
 
     },
     resolve: {
-      extensions: ['.js', '.jsx']
+      extensions: [ '.js', '.jsx'],
     },
     module: {
       rules: [

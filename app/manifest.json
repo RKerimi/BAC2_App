@@ -1,7 +1,7 @@
 {
   "name":"PWA Smart Home Light",
   "short_name":"PWA_SHL",
-  "start_url":"./",
+  "start_url":"./licht",
   "scope":".",
   "display":"standalone",
   "background_color":"#fff",
