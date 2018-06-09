@@ -1,14 +1,14 @@
 {
   "name":"PWA Smart Home Light",
   "short_name":"PWA_SHL",
-  "start_url":"./licht",
+  "start_url":"./",
   "scope":".",
   "display":"standalone",
-  "background_color":"#fff",
+  "background_color":"#3F51B5",
   "theme-color":"#3F51B5",
   "description":"Keep running with PWA",
   "dir":"ltr",
-  "lang":"de-de",
+  "lang":"en-US",
   "orientation":"portrait-primary",
   "icons":[
     {

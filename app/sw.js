@@ -8,29 +8,26 @@
 
 self.addEventListener('install', event => {
     console.log('[Service Worker] Installing Service Worker ....', event);
-event.waitUntil(
-    caches.open('static')       //parameter = Cachename --> kann benannt werden wie man will
-        .then(cache => {
-        console.log('[Service Worker] Precaching');
-cache.add('/src/js/app.js')
-}))});
+
+});
 
 self.addEventListener('activate', event => {
     console.log('[Service Worker] Activating Service Worker ....', event);
-return self.clients.claim();
+    return self.clients.claim();
 })
 
+
 //fetch Event wird von der aktuellen Seite getriggert
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)     //request sind die Keys
             .then(response => {
-            // Cache hit - return response
-            if (response) {
-                return response;
-            }else{
-                return fetch(event.request);
-}
-})
-);
+                // Cache hit - return response
+                if (response) {
+                    return response;
+                }else{
+                    return fetch(event.request);
+                }
+            })
+    );
 });

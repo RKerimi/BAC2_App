@@ -1,9 +1,6 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom'
 import {Segment, Menu, Container, Grid, Header} from 'semantic-ui-react'
-import ImgSmartHome from '../../img/imgSmartHome.jsx'
-
-
 
 
 const navColor = {backgroundColor: 'green',
@@ -27,19 +24,15 @@ class Navigation extends Component {
                     <Grid divided='vertically'>
                         <Grid.Row columns={1}>
                             <Grid.Column>
-
                                 <Menu size='large' style={navColor}>
-                                    <Menu.Item as={Link} to="/home" active={activeItem === '/'} onClick={this.handleItemClick}>Home</Menu.Item>
+                                    <Menu.Item as={Link} to="/" active={activeItem === '/'} onClick={this.handleItemClick}>Home</Menu.Item>
                                     <Menu.Item as={Link} to="licht" active={activeItem === '/licht'} onClick={this.handleItemClick}>Licht</Menu.Item>
                                     <Menu.Item as={Link} to="heizung" active={activeItem === '/heizung'} onClick={this.handleItemClick}>Heizung</Menu.Item>
                                     <Menu.Item as={Link} to="garage" active={activeItem === '/garage'} onClick={this.handleItemClick}>Garage</Menu.Item>
-                                    <ImgSmartHome />
                                 </Menu>
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
-
-
                 </Segment>
             </Container>
         )
