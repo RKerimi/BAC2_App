@@ -3,47 +3,49 @@ import reqwest from 'reqwest'
 import {Link, browserHistory} from "react-router-dom"
 import {Header, Container} from "semantic-ui-react";
 
+/*function TempDisplay(temp) {
+    return (
+        <Container>
+            <Header as="h5">Aktuelle Temperatur</Header>
+            <TempDisplay temp={temp}/>
+        </Container>
+    )
+}*/
+
 
 
 export default class Radiator extends React.Component {
     constructor() {
         super();
 
-       //api_url = 'http://samples.openweathermap.org/data/2.5/weather?appid=bb7a1436b1382913ef22ac44008c8a76&units=metric';
+       //api_url = 'http://samples.openweathermap.org/data/2.5/weather?appid=6384f6940e1b5dd2173efe3106363fa4&units=metric';
 
 
         this.state = {
-            pictures: []
+            temp: []
         };
 
 
     }
 
     componentDidMount() {
-        fetch('https://randomuser.me/api/')
+
+        fetch('../src/data/weather.json')
             .then(results =>  {return results.json();
             // handle network error
-        }).then(data => {
-            let pictures = data.results.map((pic) => {
-                return(
-                    <div key={pic.results}>
-                        <img src={pic.picture.medium} />
-                    </div>)
-            })
-
-                this.setState({pictures: pictures});
-                console.log('state', this.state.pictures)
-        })
-
+        }).then(result => {
+            console.log(result)
+            this.setState({temp: result.main.temp});
+            console.log(this.state.temp)
+        }).catch(error => console.error('Error:', error))
     }
 
-
-
-
     render(){
+        let{temp} = this.state
         return (
             <div>
-                {this.state.pictures}
+                {temp}
+
             </div>
         )}
     }
