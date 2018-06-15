@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
-import reqwest from 'reqwest'
 import {Link, browserHistory} from "react-router-dom"
 import {Header, Container} from "semantic-ui-react";
-
-/*function TempDisplay(temp) {
-    return (
-        <Container>
-            <Header as="h5">Aktuelle Temperatur</Header>
-            <TempDisplay temp={temp}/>
-        </Container>
-    )
-}*/
-
 
 
 export default class Radiator extends React.Component {
