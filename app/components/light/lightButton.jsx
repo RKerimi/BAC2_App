@@ -39,14 +39,12 @@ class LightButton extends Component {
 
         return (
             <div>
-            <Button id="lightButton" toggle active={active}  onClick={this.handleClick}  >
+            <Button id="lightButton" toggle active={active}  onClick={this.handleClick}  color='red' size='massive' >
                 {this.state.active ? 'Licht AN' : 'Licht AUS'}
                 {console.dir(active)}
                 {console.log(count)}
                 {console.log(time)}
-            </Button><br/>
-                {count}<br/>
-                {time.toLocaleString()}
+            </Button>
             </div>
                                 )
     }

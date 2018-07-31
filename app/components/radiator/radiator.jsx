@@ -28,13 +28,11 @@ export default class Radiator extends React.Component {
             console.log(this.state.temp)
         }).catch(error => console.error('Error:', error))
     }
-
     render(){
         let{temp} = this.state
         return (
             <div>
                 {temp}
-
             </div>
         )}
     }
