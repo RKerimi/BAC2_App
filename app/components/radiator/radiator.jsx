@@ -1,7 +1,22 @@
-import React, { Component } from 'react';
-import {Link, browserHistory} from "react-router-dom"
-import {Header, Container} from "semantic-ui-react";
+import React, {Component} from 'react';
+import {browserHistory} from 'react-router-dom'
+import {Header, Container, Link} from 'semantic-ui-react';
+import RadiatorGraph from './radiatorGraph'
+import RadiatorRoom from './tempRoom'
 
+
+function ClimateDisplay(props) {
+    return (
+        <Container>
+            <RadiatorRoom
+                temp={props.temp}
+                pressure={props.pressure}
+                temp_max={props.temp_max}
+                humidity={props.humidity}
+                country={props.country}/>
+        </Container>
+    )
+}
 
 export default class Radiator extends React.Component {
     constructor() {
@@ -12,9 +27,10 @@ export default class Radiator extends React.Component {
 
         this.state = {
             temp: [],
-            pressure:[],
-            temp_max:[],
-            humidity:[]
+            pressure: [],
+            temp_max: [],
+            humidity: [],
+            country: []
         };
 
 
@@ -23,32 +39,46 @@ export default class Radiator extends React.Component {
     componentDidMount() {
 
         fetch('../src/data/weather.json')
-            .then(res =>  {return res.json();
+            .then(res => {
+                return res.json();
                 // handle network error
             }).then(res => {
             console.dir(res)
-            this.setState({temp: res.main.temp,
-                pressure:res.main.pressure,
-                temp_max:res.main.temp_max,
-                humidity:res.main.humidity
-             });
+            this.setState({
+                temp: res.main.temp,
+                pressure: res.main.pressure,
+                temp_max: res.main.temp_max,
+                humidity: res.main.humidity
+            });
             console.log(this.state.temp + "temp")
-            console.log(this.state.pressure  + "pressure")
-            console.log(this.state.temp_max  +  "temp_max")
-            console.log(this.state.humidity  +  "temp_min")
+            console.log(this.state.pressure + "pressure")
+            console.log(this.state.temp_max + "temp_max")
+            console.log(this.state.humidity + "humidity")
 
         }).catch(error => console.error('Error:', error))
+
+        fetch('../src/data/weather.json')
+            .then(res => {
+                return res.json();
+                // handle network error
+            }).then(res => {
+            this.setState({
+                country: res.sys.country,
+            });
+            console.log(this.state.country + "country")
+
+        }).catch(error => console.error('Error:', error))
+
     }
-    render(){
-        let{temp, pressure, temp_max} = this.state
-        let{escription} = this.state
+
+    render() {
+        let {temp, pressure, temp_max, humidity, country} = this.state
 
         return (
-            <div>
-                {this.state.temp}<br/>
-                {this.state.pressure}<br/>
-                {this.state.temp_max}<br/>
-                {this.state.humidity}
-            </div>
-        )}
+            <ClimateDisplay temp={temp} pressure={pressure}
+                            temp_max={temp_max} humidity={humidity} country={country}/>
+
+
+        )
+    }
 }

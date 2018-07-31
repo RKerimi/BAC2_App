@@ -4,7 +4,7 @@ import {Header, Segment, Container, Divider} from "semantic-ui-react";
 import LightButton from '../light/lightButton.jsx'
 import LightImage from '../light/lightImage'
 
-export default class AccordionExampleFluid extends Component {
+export default class Light extends Component {
     state = { activeIndex: 0 }
 
     handleClick = (e, titleProps) => {
