@@ -16,8 +16,9 @@
     "temp": 16,
     "pressure": 1013.75,
     "humidity": 100,
-    "temp_min": 285.514,
     "temp_max": 285.514,
+    "temp_min": 285.514,
+    "escription": "Cloud",
     "sea_level": 1023.22,
     "grnd_level": 1013.75
   },
