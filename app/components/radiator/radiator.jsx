@@ -11,7 +11,7 @@ function ClimateDisplay(props) {
             <RadiatorRoom
                 temp={props.temp}
                 pressure={props.pressure}
-                temp_max={props.temp_max}
+                temp_soll={props.temp_soll}
                 humidity={props.humidity}
                 country={props.country}/>
         </Container>
@@ -28,7 +28,7 @@ export default class Radiator extends React.Component {
         this.state = {
             temp: [],
             pressure: [],
-            temp_max: [],
+            temp_soll: [],
             humidity: [],
             country: []
         };
@@ -43,12 +43,12 @@ export default class Radiator extends React.Component {
             this.setState({
                 temp: res.main.temp,
                 pressure: res.main.pressure,
-                temp_max: res.main.temp_max,
+                temp_soll: res.main.temp_soll,
                 humidity: res.main.humidity
             });
             console.log(this.state.temp + "temp")
             console.log(this.state.pressure + "pressure")
-            console.log(this.state.temp_max + "temp_max")
+            console.log(this.state.temp_soll + "temp_soll")
             console.log(this.state.humidity + "humidity")
 
         }).catch(error => console.error('Error:', error))
@@ -68,12 +68,12 @@ export default class Radiator extends React.Component {
     }
 
     render() {
-        let {temp, pressure, temp_max, humidity, country} = this.state
+        let {temp, pressure, temp_soll, humidity, country} = this.state
 
         return (
             <ClimateDisplay temp={temp}
                             pressure={pressure}
-                            temp_max={temp_max}
+                            temp_soll={temp_soll}
                             humidity={humidity}
                             country={country}/>
 
