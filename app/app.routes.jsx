@@ -4,6 +4,7 @@ import Navigation from './components/_core/navigation/navigation'
 import Home from "./components/home/home";
 import Light from "./components/light/light";
 import Radiator from './components/radiator/radiator'
+import Garage from './components/garage/garage'
 import Settings from './components/settings/settings'
 import Logout from './components/logout/logout.jsx'
 
@@ -20,6 +21,7 @@ export default class Routes extends React.Component {
                 <Route exact path='/' component={Home}/>
                 <Route exact path='/licht' component={Light}/>
                 <Route exact path='/heizung' component={Radiator}/>
+                <Route exact path='/garage' component={Garage}/>
                 <Route exact path='/einstellungen' component={Settings}/>
                 <Route exact path='/abmelden' component={Logout}/>
                 <Route path='*' component={NotFound}/>
