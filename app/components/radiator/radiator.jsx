@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {browserHistory} from 'react-router-dom'
 import {Header, Container, Link} from 'semantic-ui-react';
-import RadiatorGraph from './radiatorGraph'
 import RadiatorRoom from './tempRoom'
 
 
@@ -10,7 +9,7 @@ function ClimateDisplay(props) {
         <Container>
             <RadiatorRoom
                 temp={props.temp}
-                pressure={props.pressure}
+                rain={props.rain}
                 temp_soll={props.temp_soll}
                 humidity={props.humidity}
                 country={props.country}/>
@@ -27,7 +26,7 @@ export default class Radiator extends React.Component {
 
         this.state = {
             temp: [],
-            pressure: [],
+            rain: [],
             temp_soll: [],
             humidity: [],
             country: []
@@ -42,12 +41,12 @@ export default class Radiator extends React.Component {
             console.dir(res)
             this.setState({
                 temp: res.main.temp,
-                pressure: res.main.pressure,
+                rain: res.main.rain,
                 temp_soll: res.main.temp_soll,
                 humidity: res.main.humidity
             });
             console.log(this.state.temp + "temp")
-            console.log(this.state.pressure + "pressure")
+            console.log(this.state.rain + "rain")
             console.log(this.state.temp_soll + "temp_soll")
             console.log(this.state.humidity + "humidity")
 
@@ -68,11 +67,11 @@ export default class Radiator extends React.Component {
     }
 
     render() {
-        let {temp, pressure, temp_soll, humidity, country} = this.state
+        let {temp, rain, temp_soll, humidity, country} = this.state
 
         return (
             <ClimateDisplay temp={temp}
-                            pressure={pressure}
+                            rain={rain}
                             temp_soll={temp_soll}
                             humidity={humidity}
                             country={country}/>

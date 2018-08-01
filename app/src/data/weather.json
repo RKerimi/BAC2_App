@@ -14,8 +14,8 @@
   "base": "stations",
   "main": {
     "temp": 16,
-    "pressure": 1013.75,
-    "humidity": 100,
+    "rain": 65,
+    "humidity": 50,
     "temp_soll": 18,
     "temp_min": 285.514,
     "escription": "Cloud",

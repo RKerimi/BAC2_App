@@ -19,7 +19,7 @@ export default class RadiatorRoom extends Component {
 
     render() {
         const temp = this.props.temp;
-        const pressure = this.props.pressure;
+        const rain = this.props.rain;
         const temp_soll = this.props.temp_soll;
         const humidity = this.props.humidity;
         const country = this.props.country;
@@ -47,11 +47,11 @@ export default class RadiatorRoom extends Component {
                         <Grid columns='equal'>
                             <Grid.Column>
                                 <Segment><p><strong style={{fontSize: '400%'}}>{temp}</strong></p>
-                                   </Segment>  <Icon name='home' size='huge' /><Icon name='arrow left' color='green'  />
+                                </Segment> <Icon name='home' size='huge'/><Icon name='arrow left' color='green'/>
                             </Grid.Column>
                             <Grid.Column>
                                 <Segment><p><strong style={{fontSize: '400%'}}>{temp_soll}</strong></p>
-                                </Segment>  <Icon name='home' size='huge' /><Icon name='arrow right' color='red'  />
+                                </Segment> <Icon name='home' size='huge'/><Icon name='arrow right' color='red'/>
                             </Grid.Column>
                         </Grid>
                         <Grid columns='equal'>
@@ -65,20 +65,21 @@ export default class RadiatorRoom extends Component {
 
                             </Grid.Column>
 
-                                <Grid.Row columns={3}>
-                                    <Grid.Column>
-                                        <Icon name='cloud'  /> {pressure}
-                                    </Grid.Column>
-                                    <Grid.Column>
+                            <Grid.Row columns={3}>
+                                <Grid.Column>
+                                    <Icon name='theme' size='huge'/> <strong style={{fontSize: '160%'}}>{rain} %</strong>
+                                </Grid.Column>
+                                <Grid.Column>
 
-                                    </Grid.Column>
-                                    <Grid.Column>
-                                        {humidity}
-                                    </Grid.Column>
-                                </Grid.Row>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Icon name='thermometer half' size='huge'/> <strong
+                                    style={{fontSize: '160%'}}>{humidity} %</strong>
+                                </Grid.Column>
+                            </Grid.Row>
 
                         </Grid>
-                        {country}
+                        <strong style={{fontSize: '160%'}}>{country}</strong>
                     </Accordion.Content>
 
                     <Accordion.Title active={activeIndex === 1} index={1} onClick={this.handleClick}

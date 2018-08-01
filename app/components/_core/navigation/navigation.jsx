@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom'
-import {Segment, Menu, Container, Grid, Header} from 'semantic-ui-react'
+import {Menu, Container, Grid, Icon} from 'semantic-ui-react'
 
 
 const navColor = {backgroundColor: 'green',
@@ -17,7 +17,7 @@ class Navigation extends Component {
     render() {
         const { activeItem } = this.state
 
-        return (
+        return (<Container>
                     <Grid divided='vertically'>
                         <Grid.Row columns={1}>
                             <Grid.Column>
@@ -26,10 +26,21 @@ class Navigation extends Component {
                                     <Menu.Item as={Link} to="licht" active={activeItem === '/licht'} onClick={this.handleItemClick}>Licht</Menu.Item>
                                     <Menu.Item as={Link} to="heizung" active={activeItem === '/heizung'} onClick={this.handleItemClick}>Heizung</Menu.Item>
                                     <Menu.Item as={Link} to="garage" active={activeItem === '/garage'} onClick={this.handleItemClick}>Garage</Menu.Item>
+
+                                <Menu.Menu position='right'>
+                                    <Menu.Item><Icon name='setting'/></Menu.Item>
+                                    <Menu.Item
+                                        as={Link} to="/"
+                                        name='logout'
+                                        active={activeItem === 'logout'}
+                                        onClick={this.handleItemClick}
+                                    />
+                                </Menu.Menu>
                                 </Menu>
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
+        </Container>
         )
     }
 }
