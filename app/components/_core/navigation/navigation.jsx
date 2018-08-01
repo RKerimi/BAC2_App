@@ -30,9 +30,9 @@ class Navigation extends Component {
                                 <Menu.Menu position='right'>
                                     <Menu.Item as={Link} to="einstellungen" active={activeItem === '/einstellungen'} onClick={this.handleItemClick}><Icon name='setting'/></Menu.Item>
                                     <Menu.Item
-                                        as={Link} to="/"
+                                        as={Link} to="/abmelden"
                                         name='logout'
-                                        active={activeItem === 'logout'}
+                                        active={activeItem === 'abmelden'}
                                         onClick={this.handleItemClick}
                                     />
                                 </Menu.Menu>

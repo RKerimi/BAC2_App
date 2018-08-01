@@ -5,6 +5,7 @@ import Home from "./components/home/home";
 import Light from "./components/light/light";
 import Radiator from './components/radiator/radiator'
 import Settings from './components/settings/settings'
+import Logout from './components/logout/logout.jsx'
 
 const NotFound = () => (
     <h1>404 - Page not found</h1>
@@ -20,6 +21,7 @@ export default class Routes extends React.Component {
                 <Route exact path='/licht' component={Light}/>
                 <Route exact path='/heizung' component={Radiator}/>
                 <Route exact path='/einstellungen' component={Settings}/>
+                <Route exact path='/abmelden' component={Logout}/>
                 <Route path='*' component={NotFound}/>
             </Switch>
             </div>
