@@ -28,7 +28,6 @@ export default class Light extends Component {
                     as='h1'
                     content='Lichtsystem'
                     style={{fontSize: '4em', fontWeight: 'normal', marginBottom: '0.5em'}}
-
                 />
                 <LightImage />
                 <Divider/>

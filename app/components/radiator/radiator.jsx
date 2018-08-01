@@ -32,16 +32,12 @@ export default class Radiator extends React.Component {
             humidity: [],
             country: []
         };
-
-
     }
-
     componentDidMount() {
-
+        //toDO Authentication
         fetch('../src/data/weather.json')
             .then(res => {
                 return res.json();
-                // handle network error
             }).then(res => {
             console.dir(res)
             this.setState({
@@ -75,8 +71,11 @@ export default class Radiator extends React.Component {
         let {temp, pressure, temp_max, humidity, country} = this.state
 
         return (
-            <ClimateDisplay temp={temp} pressure={pressure}
-                            temp_max={temp_max} humidity={humidity} country={country}/>
+            <ClimateDisplay temp={temp}
+                            pressure={pressure}
+                            temp_max={temp_max}
+                            humidity={humidity}
+                            country={country}/>
 
 
         )

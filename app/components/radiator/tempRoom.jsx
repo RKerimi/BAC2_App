@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Accordion, Icon } from 'semantic-ui-react'
-import {Header, Segment, Container, Divider} from "semantic-ui-react";
+
+import { Accordion, Icon ,Header, Segment, Container, Divider, Link} from "semantic-ui-react";
 import LightButton from '../light/lightButton.jsx'
 import RadiatorGraph from '../radiator/radiatorGraph'
 
@@ -33,9 +33,8 @@ export default class RadiatorRoom extends Component {
                 vertical>
                 <Header
                     as='h1'
-                    content='Lichtsystem'
+                    content='Raumklima'
                     style={{fontSize: '4em', fontWeight: 'normal', marginBottom: '0.5em'}}
-
                 />
                 <RadiatorGraph />
                 <Divider/>
@@ -58,7 +57,7 @@ export default class RadiatorRoom extends Component {
                         Schlafzimmer
                     </Accordion.Title>
                     <Accordion.Content active={activeIndex === 1} style={{backgroundColor: '#F1F5FF'}}>
-                        <LightButton/>
+                       Bitte Verbinden Sie sich mit ihrem Thermosat oder Wetter Modul
                     </Accordion.Content>
 
                     <Accordion.Title active={activeIndex === 2} index={2} onClick={this.handleClick} style={{fontSize: '2em', fontWeight: 'normal', marginBottom: 0}}>

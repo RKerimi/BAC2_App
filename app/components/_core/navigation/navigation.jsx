@@ -4,9 +4,8 @@ import {Segment, Menu, Container, Grid, Header} from 'semantic-ui-react'
 
 
 const navColor = {backgroundColor: 'green',
-                    padding:'0.2em'};
+    padding:'0.2em', margin:'0.2em'};
 
-const navColorBackground = {backgroundColor: '#FFF', marginTop:'0.1em'};
 
 class Navigation extends Component {
     state = {}
@@ -19,8 +18,6 @@ class Navigation extends Component {
         const { activeItem } = this.state
 
         return (
-            <Container>
-                <Segment style={navColorBackground}>
                     <Grid divided='vertically'>
                         <Grid.Row columns={1}>
                             <Grid.Column>
@@ -33,8 +30,6 @@ class Navigation extends Component {
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
-                </Segment>
-            </Container>
         )
     }
 }
