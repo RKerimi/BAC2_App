@@ -28,7 +28,7 @@ class Navigation extends Component {
                                     <Menu.Item as={Link} to="garage" active={activeItem === '/garage'} onClick={this.handleItemClick}>Garage</Menu.Item>
 
                                 <Menu.Menu position='right'>
-                                    <Menu.Item><Icon name='setting'/></Menu.Item>
+                                    <Menu.Item as={Link} to="einstellungen" active={activeItem === '/einstellungen'} onClick={this.handleItemClick}><Icon name='setting'/></Menu.Item>
                                     <Menu.Item
                                         as={Link} to="/"
                                         name='logout'
