@@ -8,6 +8,7 @@ import Garage from './components/garage/garage'
 import Settings from './components/settings/settings'
 import Logout from './components/logout/logout.jsx'
 
+
 const NotFound = () => (
     <h1>404 - Page not found</h1>
 )

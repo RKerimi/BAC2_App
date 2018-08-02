@@ -15,7 +15,7 @@ export default class Garage extends Component {
                 vertical>
                 <Header
                     as='h1'
-                    content='Lichtsystem'
+                    content='Garage'
                     style={{fontSize: '4em', fontWeight: 'normal', marginBottom: '0.5em'}}
                 />
                 <GarageImage />

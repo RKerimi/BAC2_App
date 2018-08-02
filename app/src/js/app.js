@@ -17,3 +17,4 @@ window.addEventListener('beforeinstallprompt', event => {
     deferredPrompt = event;
     return false;
 });
+

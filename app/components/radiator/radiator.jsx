@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {browserHistory} from 'react-router-dom'
-import {Header, Container, Link} from 'semantic-ui-react';
+import {  Container, Link} from 'semantic-ui-react';
 import RadiatorRoom from './tempRoom'
 
 

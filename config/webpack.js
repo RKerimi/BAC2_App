@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
 
+
 const pkg = require('../package.json')
 
 const config = function (env) {
