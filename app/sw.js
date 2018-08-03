@@ -19,15 +19,18 @@
 let cacheName = 'precache';
 let filesToCache = [
     '/',
+    '/app',
     '/index.html',
     '/src/js/app.js',
     '/src/js/feed.js',
     '/src/js/promise.js',
+    '/static/img/',
     '/static/img/dashboard-mockup.jpg',
     '/static/img/bulp.jpeg',
     '/static/img/garage.jpeg',
-    '/static/img/Graph_Heizung.JPG'
-    ];
+    '/static/img/Graph_Heizung.JPG',
+    '/manifest.json'
+];
 
 self.addEventListener('install', event => {
     console.log('[Service Worker] Installing Service Worker ....', event);
