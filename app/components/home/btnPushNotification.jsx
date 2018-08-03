@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Link } from 'semantic-ui-react'
 
-const BtnPushNotification = () =>  <Button  color='red'>Subscribe</Button>
+const BtnPushNotification = () =>  <Button className="" color='red'>Subscribe</Button>
 
 export default BtnPushNotification

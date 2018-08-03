@@ -45,7 +45,7 @@ export default class Garage extends Component {
     render() {
         return (
             <Container>
-                <Header></Header>
+                <Header>Garagensystem</Header>
                 <MapWithAMarker
                     Marker={this.state.Marker}
                     currentLocation={this.state.currentLatLng} />

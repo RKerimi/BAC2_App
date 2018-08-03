@@ -19,12 +19,9 @@
 let cacheName = 'precache';
 let filesToCache = [
     '/',
-    '/app',
-    '/dist/index.html',
     '/src/js/app.js',
     '/src/js/feed.js',
     '/src/js/promise.js',
-    '/static/img/',
     '/static/img/dashboard-mockup.jpg',
     '/static/img/bulp.jpeg',
     '/static/img/garage.jpeg',
