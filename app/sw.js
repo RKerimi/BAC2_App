@@ -20,7 +20,7 @@ let cacheName = 'precache';
 let filesToCache = [
     '/',
     '/app',
-    '/index.html',
+    '/dist/index.html',
     '/src/js/app.js',
     '/src/js/feed.js',
     '/src/js/promise.js',
