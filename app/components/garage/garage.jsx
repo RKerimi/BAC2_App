@@ -1,27 +1,61 @@
-import React, { Component } from 'react'
-import {Icon } from 'semantic-ui-react'
-import {Header, Segment, Container, Divider} from "semantic-ui-react";
+import React, { Component } from 'react';
+import {  Container, Link, Divider, Header} from 'semantic-ui-react';
+import { render } from 'react-dom';
+//import './style.css';
+import MapWithAMarker from './garageMaps';
 import GarageButton from './garageButton.jsx'
-import GarageImage from './garageImage'
+
 
 export default class Garage extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            currentLatLng: {
+                lat: 0,
+                lng: 0
+            },
+            Marker: false
+        }
+    }
+
+    CurrentLocation = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    console.log(position.coords);
+                    this.setState(() => ({
+                        currentLatLng: {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        },
+                        Marker: true
+                    }))
+                }
+            )
+        } else {
+            error => console.log(error)
+        }
+    }
+
+
+    componentDidMount() {
+        this.CurrentLocation()
+    }
 
     render() {
-
-        return <Container>
-            <Segment
-                textAlign='center'
-                style={{minHeight: 700, padding: '1em 0em', backgroundColor: '#F1F5FF'}}
-                vertical>
-                <Header
-                    as='h1'
-                    content='Garage'
-                    style={{fontSize: '4em', fontWeight: 'normal', marginBottom: '0.5em'}}
-                />
-                <GarageImage />
+        return (
+            <Container>
+                <Header></Header>
+                <MapWithAMarker
+                    Marker={this.state.Marker}
+                    currentLocation={this.state.currentLatLng} />
                 <Divider/>
                 <GarageButton/>
-            </Segment>
-        </Container>
+
+            </Container>
+        );
     }
 }
+
+
+

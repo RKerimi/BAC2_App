@@ -1,11 +1,17 @@
 import React from 'react'
-import { Button } from 'semantic-ui-react'
+import { Button, Grid , Segment} from 'semantic-ui-react'
 
 const GarageButton = () => (
-    <div>
-        <Button positive size="huge">Öffnen</Button>
-        <Button negative>Schliessen</Button>
-    </div>
+    <Grid columns='equal'>
+        <Grid.Row>
+            <Grid.Column>
+                <Button positive size="huge">Öffnen</Button>
+            </Grid.Column>
+            <Grid.Column>
+               <Button negative>Schliessen</Button>
+            </Grid.Column>
+        </Grid.Row>
+    </Grid>
 )
 
 export default GarageButton

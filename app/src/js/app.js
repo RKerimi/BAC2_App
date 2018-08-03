@@ -39,7 +39,7 @@ function permissionNotifikationAsk() {
     })
 }
 
-function displayNotificationConfirm(){
+function displayNotificationConfirm() {
     new Notification('Juhu');
 }
 
@@ -47,12 +47,12 @@ function displayNotificationConfirm(){
 // auch verwendet werden um den Button erst anzuzeigen wenn dieser auch vom Browser supported wird
 //in diesem Fall wird nur mit Google Chromebrowser gearbeitet, darum ist dieser Teil auskommentiert
 
-    //Falls mehre Buttons als Notifikationbuttons
-    // benötigt werden kann man durch diese wie folgt durch Iterieren
-if ('Notification' in window !== null){
-    for (let i =0; i < enableNotiBtn; i++){
-    //enableNotiBtn[i].style.display='inlin-block';
-    enableNotiBtn[i].addEndEventListener('click', permissionNotifikationAsk);
-    console.log('Button Clicked')
-}
+//Falls mehre Buttons als Notifikationbuttons
+// benötigt werden kann man durch diese wie folgt durch Iterieren
+if ('Notification' in window !== null) {
+    for (let i = 0; i < enableNotiBtn; i++) {
+        //enableNotiBtn[i].style.display='inlin-block';
+        enableNotiBtn[i].addEndEventListener('click', permissionNotifikationAsk);
+        console.log('Button Clicked')
+    }
 }
