@@ -19,6 +19,7 @@
 let cacheName = 'precache';
 let filesToCache = [
     '/',
+    '/app.container.jsx',
     '/src/js/app.js',
     '/src/js/feed.js',
     '/src/js/promise.js',

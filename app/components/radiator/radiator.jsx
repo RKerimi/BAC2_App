@@ -32,28 +32,46 @@ export default class Radiator extends React.Component {
             country: []
         };
     }
+
     componentDidMount() {
+        function update(data) {
+            return fetch('../src/data/weather.json', {
+                method: 'put',
+                body: JSON.stringify(data),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(()=>console.log('updated!!!'))
+                .catch(error => console.error('Error:', error))
+        }
+
+
         //toDO Authentication
-        fetch('../src/data/weather.json')
-            .then(res => {
-                return res.json();
-            }).then(res => {
-            console.dir(res)
-            this.setState({
-                temp: res.main.temp,
-                rain: res.main.rain,
-                temp_soll: res.main.temp_soll,
-                humidity: res.main.humidity
-            });
-            console.log(this.state.temp + "temp")
-            console.log(this.state.rain + "rain")
-            console.log(this.state.temp_soll + "temp_soll")
-            console.log(this.state.humidity + "humidity")
+        fetch('../src/data/weather.json',{
+            method:'get'
+        }).then(res => {
+                    return res.json();
+                }).then(res => {
+                    console.dir(res)
+                    this.setState({
+                        temp: res.main.temp,
+                        rain: res.main.rain,
+                        temp_soll: res.main.temp_soll,
+                        humidity: res.main.humidity
+                    });
+                    console.log(this.state.temp + "temp")
+                    console.log(this.state.rain + "rain")
+                    console.log(this.state.temp_soll + "temp_soll")
+                    console.log(this.state.humidity + "humidity")
 
-        }).catch(error => console.error('Error:', error))
+                }).catch(error => console.error('Error:', error))
 
-        fetch('../src/data/weather.json')
-            .then(res => {
+
+        fetch('../src/data/weather.json',{
+            method:'get'
+        }).then(res => {
                 return res.json();
                 // handle network error
             }).then(res => {
