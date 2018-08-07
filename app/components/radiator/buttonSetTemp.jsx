@@ -17,7 +17,7 @@ class ButtonSetTemp extends Component {
             <Button.Group size='huge'>
                 <Button>-</Button>
                 <Button.Or />
-                <Button onClick={this.handleChange} temp={temp}  positive>+</Button>
+                <Button  onClick={this.handleChange} positive>+</Button>
             </Button.Group>
         )
     }

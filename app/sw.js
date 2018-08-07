@@ -23,6 +23,7 @@ let filesToCache = [
     '/src/js/app.js',
     '/src/js/feed.js',
     '/src/js/promise.js',
+    '/static/img/light48.png',
     '/static/img/dashboard-mockup.jpg',
     '/static/img/bulp.jpeg',
     '/static/img/garage.jpeg',
@@ -61,4 +62,28 @@ self.addEventListener('fetch', event => {
                 }
             })
     );
+});
+
+self.addEventListener('notificationclose', e => {
+    let notification = e.notification;
+    let datePush = notification.data.dateOfArrival;
+    let primaryKey = notification.data.primaryKey;
+
+    console.log('Closed notification: ' + primaryKey);
+    console.log('Closed notification: ' + datePush);
+});
+
+self.addEventListener('notificationclick', e => {
+    let notification = e.notification;
+    let primaryKey = notification.data.primaryKey;
+    let action = e.action;
+
+
+    if (action === 'close') {
+        notification.close();
+    } else {
+        clients.openWindow('http://localhost:8080', primaryKey);
+        e.notification.close()
+
+    }
 });

@@ -13,7 +13,7 @@
   ],
   "base": "stations",
   "main": {
-    "temp": 16,
+    "temp": 17,
     "rain": 65,
     "humidity": 50,
     "temp_soll": 18,
