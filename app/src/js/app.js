@@ -2,7 +2,7 @@ var deferredPrompt;
 var enableNotiBtn = document.querySelector('.enable_notifications');
 
 let optionsPush = {
-    body: 'Nothing to declared',
+    body: 'Nothing to declared and the',
     icon: '../static/img/light48.png',
     data: {
         dateOfArrival: Date.now(),
@@ -13,6 +13,7 @@ if (!window.Promise) {
     window.Promise = Promise;
 }
 //Registrierung und Validierung vom Service Worker
+
 if ('serviceWorker' in navigator && 'Notification' in window) {
     console.log('Service Worker and Notification is supported')
     navigator.serviceWorker.register('/sw.js')
@@ -65,17 +66,18 @@ function displayNotificationConfirm() {
     }
 }*/
 
-Notification.requestPermission(status => {
+/*Notification.requestPermission(status => {
     console.log('Notification permission status:', status);
 });
-
+*/
 
 
 function displayNotification() {
     if (Notification.permission == 'granted') {
         navigator.serviceWorker.getRegistration()
             .then(reg => {
-                reg.showNotification('Hello world!!!',optionsPush );
+                reg.showNotification('Neue Nachrichte',optionsPush );
+                console.log('Notification permission status:', status);
         });
     }
 }

@@ -88,6 +88,7 @@ export default class Radiator extends React.Component {
         let {temp, rain, temp_soll, humidity, country} = this.state
 
         return (
+
             <ClimateDisplay temp={temp}
                             rain={rain}
                             temp_soll={temp_soll}

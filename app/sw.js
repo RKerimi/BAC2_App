@@ -19,7 +19,7 @@
 let cacheName = 'precache';
 let filesToCache = [
     '/',
-    '/app.container.jsx',
+    '/index.html',
     '/src/js/app.js',
     '/src/js/feed.js',
     '/src/js/promise.js',
@@ -75,14 +75,12 @@ self.addEventListener('notificationclose', e => {
 
 self.addEventListener('notificationclick', e => {
     let notification = e.notification;
-    let primaryKey = notification.data.primaryKey;
     let action = e.action;
-
 
     if (action === 'close') {
         notification.close();
     } else {
-        clients.openWindow('http://localhost:8080', primaryKey);
+        clients.openWindow('http://localhost:8080/benachichtigungen');
         e.notification.close()
 
     }

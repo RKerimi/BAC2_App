@@ -6,7 +6,7 @@ import BtnPushNotification from "./btnPushNotification"
 
 const Home = () => (
     <Container>
-        <button className="enable_notifications ui primary  button" >Subscribe</button>
+        <BtnPushNotification className="enable_notifications ui primary  button" >Subscribe</BtnPushNotification>
         <HomeHeader/>
         <HomeImage/>
     </Container>

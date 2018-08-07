@@ -7,7 +7,7 @@ import Radiator from './components/radiator/radiator'
 import Garage from './components/garage/garage'
 import Settings from './components/settings/settings'
 import Logout from './components/logout/logout.jsx'
-
+import Notification from './components/notification/notification'
 
 const NotFound = () => (
     <h1>404 - Page not found</h1>
@@ -25,6 +25,7 @@ export default class Routes extends React.Component {
                 <Route exact path='/garage' component={Garage}/>
                 <Route exact path='/einstellungen' component={Settings}/>
                 <Route exact path='/abmelden' component={Logout}/>
+                <Route exact path='/benachichtigungen' component={Notification}/>
                 <Route path='*' component={NotFound}/>
             </Switch>
             </div>
