@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Image} from 'semantic-ui-react'
 import HomeHeader from "./header"
-import HomeImage from './HomeImage'
+import HomeImage from './homeImage'
 import BtnPushNotification from "./btnPushNotification"
 
 const Home = () => (

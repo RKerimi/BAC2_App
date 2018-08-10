@@ -1,6 +1,6 @@
 {
-  "name":"PWA Smart Home Light",
-  "short_name":"PWA_SHL",
+  "name":"PWA Smart Home RMJ",
+  "short_name":"PWA_SHL_RMJ",
   "start_url":"./",
   "scope":".",
   "display":"fullscreen",
@@ -8,7 +8,7 @@
   "theme_color":"#3F51C5",
   "description":"Keep running with PWA",
   "dir":"ltr",
-  "lang":"en-US",
+  "lang":"de-DE",
   "orientation":"portrait-primary",
   "icons":[
     {

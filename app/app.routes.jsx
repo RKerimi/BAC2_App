@@ -25,7 +25,7 @@ export default class Routes extends React.Component {
                 <Route exact path='/garage' component={Garage}/>
                 <Route exact path='/einstellungen' component={Settings}/>
                 <Route exact path='/abmelden' component={Logout}/>
-                <Route exact path='/benachichtigungen' component={Notification}/>
+                <Route exact path='/benachrichtigungen' component={Notification}/>
                 <Route path='*' component={NotFound}/>
             </Switch>
             </div>

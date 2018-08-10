@@ -7,8 +7,6 @@ export default class Notification extends React.Component {
     constructor() {
         super();
 
-        //api_url = 'http://samples.openweathermap.org/data/2.5/weather?appid=6384f6940e1b5dd2173efe3106363fa4&units=metric';
-
         this.state = {
             header: [],
             text: []

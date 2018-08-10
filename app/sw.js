@@ -80,7 +80,7 @@ self.addEventListener('notificationclick', e => {
     if (action === 'close') {
         notification.close();
     } else {
-        clients.openWindow('http://localhost:8080/benachichtigungen');
+        clients.openWindow('http://localhost:8080/benachrichtigungen');
         e.notification.close()
 
     }
