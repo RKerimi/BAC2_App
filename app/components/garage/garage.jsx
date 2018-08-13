@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import MapWithAMarker from './garageMaps';
 import GarageButton from './garageButton.jsx'
 
+//Quelle:https://stackblitz.com/edit/react-zqry2u?file=index.js
 
 export default class Garage extends Component {
     constructor(props) {
