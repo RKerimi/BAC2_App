@@ -1,7 +1,7 @@
 {
-  "name": "PWA_fredosar.org",
+  "name": "PWA_SmartHome",
   "version": "1.0.0",
-  "description": "PWA for fredosar.org Project",
+  "description": "PWA for Smart Home Project",
   "author": "Refik Kerimi <rkerimi.itsb-b2014@fh-salzburg.ac.at>",
   "private": true,
   "babel": {
